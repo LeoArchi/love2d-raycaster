@@ -27,6 +27,8 @@ function love.load()
 
   -- Base texture
   baseTextureData = love.image.newImageData('resources/img/base texture.png')
+  baseTextureData_width = baseTextureData:getWidth()
+  baseTextureData_height = baseTextureData:getHeight()
   --baseTextureData = love.image.newImageData('resources/img/bricks.png')
 
   -- Switch mode "texturé" ou mode "simple"
@@ -41,7 +43,7 @@ function love.load()
 
   Level:init()
   Player:init(15, 0)
-  Raycast:init(60,800)
+  Raycast:init(60,800) -- Raycast:init(60,800)
 
   HUD:init()
   Minimap:init(20, 20, 175, 100)
